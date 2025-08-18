@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&family=Playfair+Display:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-primary:#d8b4fe;
+  --color-gray:#171718;
+  --color-accent:#ec4899;
+  --font-heading: "playfair Display", serif;
+  --font-body: "lato", sans-serif;
+  --font-decorative: "pacifico", cursive;  
+}
+
+/* base */
+@layer base{
+  h1{
+    @apply text-center;
+    font-family: var(--font-heading);
+  }
+  p{
+    font-family: var(--font-body);
+  }
+}
+@layer utilities {
+  .font-decorative{
+    font-family: var(--font-decorative);
+  }
+}
