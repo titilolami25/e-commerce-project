@@ -1,30 +1,45 @@
-// const Home = () => { 
-//   return <h1 className="text-2xl font-bold">Home Page</h1>; 
-
-// }; export default Home;
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products") 
+    axios
+      .get("https://fakestoreapi.com/products")
       .then((response) => {
-        console.log(response.data); //  the product array
         setProducts(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
+        setLoading(false);
       });
   }, []);
 
+  if (loading) {
+    return <h2>Loading products...</h2>;
+  }
+
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div style={{ padding: "20px" }}>
+      <h1>Products</h1>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id} style={{ marginBottom: "15px" }}>
+            <strong>{product.title}</strong> <br />
+            ${product.price} <br />
+            <img
+              src={product.image}
+              alt={product.title}
+              style={{ width: "100px", height: "100px", objectFit: "contain" }}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default Home;
+export default Home
