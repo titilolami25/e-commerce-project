@@ -39,9 +39,9 @@ const Hero = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 10000); // every 10 seconds the image will change
+        }, 10000); // image change every 10 seconds 
 
-        return () => clearInterval(interval);
+        return () => clearInterval(interval);s
     }, [])
 
     const currentSlide = slides[currentIndex];
@@ -102,4 +102,8 @@ const Hero = () => {
   );
 }
 
-export default Hero
+export default Hero;
+
+
+
+

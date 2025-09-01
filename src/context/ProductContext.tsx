@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import type { Product } from "../types/Product";
 import axios from "axios";
 
@@ -40,3 +40,13 @@ export const ProductProvider = ({ children }: { children: React.ReactNode }) => 
   );
 };
 
+// 🔥 This is what was missing
+export const useProducts = () => {
+  const context = useContext(ProductContext);
+  if (!context) {
+    throw new Error("useProducts must be used within a ProductProvider");
+  }
+  return context;
+};
+
+export default ProductContext;
