@@ -41,7 +41,7 @@ const Hero = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
         }, 10000); // image change every 10 seconds 
 
-        return () => clearInterval(interval);s
+        return () => clearInterval(interval);
     }, [])
 
     const currentSlide = slides[currentIndex];
