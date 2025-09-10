@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import product1  from "../assets/images/product1.jpg"
-import product2  from "../assets/images/product2.jpg"
-import product3  from "../assets/images/product3.jpg"
+import product1  from "../assets/images/shirt.jpg"
+import product2  from "../assets/images/ladybag.jpg"
+import product3  from "../assets/images/ladydress.jpg"
 import { motion, AnimatePresence } from "framer-motion";
 
 type Slide = {
@@ -15,20 +15,20 @@ const slides: Slide[] = [
   {
     id: 1,
     image: product1,
-    heading: "Dish Wash Liquid Concentrate",
-    text: "Every Home Choice, save more wash more .",
+    heading: "Best Collection",
+    text: "Summer New Arrival.",
   },
   {
     id: 2,
     image: product2,
-    heading: "Hand Wash",
-    text: "Hand Free of Germs.",
+    heading: "Premium Collection",
+    text: "Comfortable Quality",
   },
   {
     id: 3,
     image: product3,
-    heading: "Hotel Toiletries ",
-    text: "Luxurious every guest deserve.",
+    heading: "Quality Affordable",
+    text: "Luxury Hand Bags .",
   },
 ];
 

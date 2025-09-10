@@ -10,7 +10,7 @@ const Footer: FC = () => {
         <div>
           <h2 className="text-xl font-decorative text-primary">Pnsmile Venture</h2>
           <p className="text-sm mt-2">
-            Affordable and efficient household care<br></br> products for every home.
+            Luxury at Affordable Price.
           </p>
         </div>
 

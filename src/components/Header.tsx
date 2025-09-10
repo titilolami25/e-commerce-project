@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo2(1)(1).png"
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "All Products", path: "/all-products" },
+  { label: "All Products", path: "/products" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
