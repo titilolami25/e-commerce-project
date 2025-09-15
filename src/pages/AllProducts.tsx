@@ -17,7 +17,7 @@ const AllProducts = () => {
   return (
     <div className="py-16 px-8">
       {/* Search */}
-      <div className="mb-8 sticky top-[2rem] 
+      <div className="mb- sticky top-[5rem] 
       z-10 backdrop-blur-md bg-white/80">
         <input
          type="text"

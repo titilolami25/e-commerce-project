@@ -1,11 +1,14 @@
 import type { FC } from "react";
 import type { Product } from "../types/Product";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext"; // ✅ import context
 
 const ProductCard: FC<{ product: Product }> = ({ product }) => {
+  const { addToCart } = useCart(); // ✅ get addToCart function
+
   return (
-    <Link 
-      to={`/products/${product.id}`} 
+    <Link
+      to={`/products/${product.id}`}
       className="bg-white rounded-lg shadow p-8 flex flex-col hover:shadow-lg transition"
     >
       <img
@@ -25,7 +28,10 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
         <p className="font-bold text-accent">${product.price}</p>
         <button
           className="bg-gray text-white px-4 py-2 rounded hover:bg-accent transition"
-          onClick={(e) => e.preventDefault()}
+          onClick={(e) => {
+            e.preventDefault(); // prevent link navigation
+            addToCart(product); // ✅ add item to cart
+          }}
         >
           Add to cart
         </button>
