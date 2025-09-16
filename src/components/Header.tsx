@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BsCart4 } from "react-icons/bs";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo2(1)(1).png";
+import logo from "../assets/images/logo.png";
 import { useCart } from "../context/CartContext";
 
 const navLinks = [
@@ -25,9 +25,9 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="Pleasant Fresh Logo" className="h-8 w-auto" />
+          <img src={logo} alt="lovely Logo" className="h-8 w-auto" />
           <span className="text-2xl font-decorative text-primary tracking-wide">
-            Pleasant Fresh
+            Lovely
           </span>
         </Link>
 
